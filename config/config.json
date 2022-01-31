@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "ysnqqrji",
+    "password": "lCwTx_2un5DUBl2L0VaZBrPyvv5xDRhx",
+    "database": "ysnqqrji",
+    "host": "arjuna.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "root",
+    "database": "ysnqqrji_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "ysnqqrji",
+    "password": "lCwTx_2un5DUBl2L0VaZBrPyvv5xDRhx",
+    "database": "ysnqqrji",
+    "host": "arjuna.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}
