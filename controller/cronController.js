@@ -1,10 +1,11 @@
-const cronModel=require('../models/formModel')
+const cronModel=require('../models/cronModel')
 
 module.exports = {
     post:{
         cronJob:async(req,res)=>{
             try {
                 let data = await cronModel.findOne({}).lean();
+                console.log(data)
                 if(data===null){
                     let temp = {
                         count:0,
@@ -15,7 +16,7 @@ module.exports = {
                 }else{
                     data.count = parseInt(data.count) + 1;
                     data.cronEvent = 'update';
-                    let updateData = await cronModel.findOne({}).update(data);
+                    let updateData = await cronModel.findOneAndUpdate(data);
                     console.log('cron job executed successfully to update');
                 }
             } catch (err) {

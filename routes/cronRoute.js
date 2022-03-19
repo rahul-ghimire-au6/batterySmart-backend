@@ -3,7 +3,7 @@ const cronRouter = Router();
 const CronJob = require('cron').CronJob;
 const cronController = require('../controller/cronController.js')
 
-const job = new CronJob('42 23 * * * *', cronController.post.cronJob, null, true, 'India Standard Time');
+const job = new CronJob('41 00 * * *', cronController.post.cronJob, null, true, 'Asia/Kolkata');
 
 job.start();
 
