@@ -7,6 +7,7 @@ const cors=require('cors')
 const userRouter = require('./routes/userRoutes');
 const formRouter = require('./routes/formRoutes');
 const mockData = require('./routes/mockDataRoute');
+const cronRouter = require('./routes/cronRoute.js');
 const { dbSelect } = process.env;
 
 app.use(morgan('dev'));
@@ -29,6 +30,7 @@ require("./config/db");
 app.use('/user',userRouter);
 app.use('/form',formRouter);
 app.use('/mockData',mockData);
+app.use(cronRouter);
 
 
 module.exports = app;
